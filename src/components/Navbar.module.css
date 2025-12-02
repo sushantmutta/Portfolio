@@ -22,6 +22,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--color-text-main);
+    z-index: 1001;
 }
 
 .dot {
@@ -62,8 +63,41 @@
     box-shadow: 0 0 15px rgba(255, 30, 0, 0.4);
 }
 
+.mobileToggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 @media (max-width: 768px) {
+    .mobileToggle {
+        display: block;
+    }
+
     .navLinks {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navLinks.active {
+        right: 0;
+    }
+
+    .navLinks a {
+        font-size: 1.2rem;
     }
 }
