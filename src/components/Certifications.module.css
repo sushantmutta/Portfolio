@@ -1,0 +1,28 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.text {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+}
+
+.certItem:hover .text {
+    color: var(--color-neon-red);
+}
